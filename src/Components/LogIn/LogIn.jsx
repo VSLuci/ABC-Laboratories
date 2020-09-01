@@ -42,7 +42,7 @@ function LogIn() {
             <input style={{ fontFamily: 'Playfair Display, serif' }}
               name=""
               className="form-control"
-              placeholder="Email address address"
+              placeholder="Email address"
               type="email"
             />
           </div>
