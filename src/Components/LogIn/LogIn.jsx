@@ -1,7 +1,7 @@
 import React from 'react';
-import GoogleFontLoader from 'react-google-font-loader'
-import "../FontAwesome/FontAwesome"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import GoogleFontLoader from 'react-google-font-loader';
+import "../FontAwesome/FontAwesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../css/common.css";
 
 function LogIn() {
