@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-// import LogIn from "./Components/LogIn/LogIn";
-import Header from "./Components/Header/Header";
-import HomePage from "./Components/Home/Index";
+// import Header from "./Components/Header/Header";
+// import HomePage from "./Components/Home/Index";
+import LogIn from "./Components/LogIn/LogIn";
 
 function App() {
   return (
     <div>
-      <HomePage />
-      <Header />
-      {/* <LogIn /> */}
+      {/* <Header /> */}
+      {/* <HomePage /> */}
+      <LogIn />
     </div>
   );
 }
