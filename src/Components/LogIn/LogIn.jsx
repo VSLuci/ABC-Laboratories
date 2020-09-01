@@ -3,6 +3,7 @@ import GoogleFontLoader from 'react-google-font-loader';
 import "../FontAwesome/FontAwesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../css/common.css";
+import { Form, Button, InputGroup } from 'react-bootstrap'
 
 function LogIn() {
 
@@ -29,47 +30,53 @@ function LogIn() {
       />
       <div className="container col-6 fixed-top shadow mt-5 h-75 mb-4 bg-white">
         <h1 className="mt-4 ml-4">Login</h1>
-        <form className="text-center" action='' method='post'>
-          <br /><br /><br />
 
-          {/* Email field */}
-          <div className="form-group input-group">
-            <div className="input-group-prepend">
+        <Form className="text-center" action='' method='post'>
+          <br />
+
+          <InputGroup className="mb-3">
+            <InputGroup.Prepend>
               <span className="input-group-text">
                 <FontAwesomeIcon icon="envelope" />
               </span>
-            </div>
-            <input style={{ fontFamily: 'Playfair Display, serif' }}
-              name=""
-              className="form-control"
-              placeholder="Email address"
+            </InputGroup.Prepend>
+            <Form.Control
+              style={{ fontFamily: 'Playfair Display, serif' }}
               type="email"
+              placeholder="Email address"
             />
-          </div>
+          </InputGroup>
 
-          {/* Password field */}
-          <div className="form-group input-group">
-            <div className="input-group-prepend">
+          <InputGroup className="mb-3">
+            <InputGroup.Prepend>
               <span className="input-group-text">
                 <FontAwesomeIcon icon="lock" />
               </span>
-            </div>
-            <input style={{ fontFamily: 'Playfair Display, serif' }}
-              name=""
-              className="form-control"
-              placeholder="Password"
+            </InputGroup.Prepend>
+            <Form.Control
+              style={{ fontFamily: 'Playfair Display, serif' }}
               type="password"
+              placeholder="Password"
             />
-          </div>
-          <br />
+          </InputGroup>
 
-          {/* Submit button */}
-          <div className="text-center">
-            <button className="btn btn-secondary btn-lg btn-block btn-login" type='submit' style={{ fontFamily: 'Abril Fatface, cursive' }}>
-              Sign in
-            </button>
-          </div>
-        </form>
+          <Form.Group controlId="formBasicCheckbox">
+            <Form.Check
+              type="checkbox"
+              label="Stay signed in"
+            />
+          </Form.Group>
+
+          <Button
+            variant="btn btn-secondary btn-lg btn-block btn-login"
+            style={{ fontFamily: 'Abril Fatface, cursive' }}
+            type="submit"
+          >
+            Submit
+          </Button>
+
+        </Form>
+
       </div>
     </div>
   );
