@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-d
 import { createBrowserHistory } from "history";
 import "./App.css";
 // import Header from "./Components/Header/Header";
-// import HomePage from "./Components/Home/Index";
+import HomePage from "./Components/Home/Index";
 import LogIn from "./Components/LogIn/LogIn";
-import Home from "./Components/Home/Index"
 
 const customHistory = createBrowserHistory({
   basename: '/abc'
@@ -35,7 +34,7 @@ class App extends Component {
       <Router basename={'/abc'} history={customHistory}>
         <Switch>
           <PublicRoute path='/login' component={LogIn} />
-          <PrivateRoute path='/home' component={Home} />
+          <PrivateRoute path='/home' component={HomePage} />
         </Switch>
       </Router>
     )

@@ -48,7 +48,11 @@ class LogIn extends Component {
             Login
           </h1>
 
-          <Form className="text-center" onSubmit={this.onSubmit} method='post'>
+          <Form
+            className="text-center"
+            onSubmit={this.onSubmit}
+            method='post'
+          >
 
             <InputGroup className="mt-5 mb-4">
               <InputGroup.Prepend>
@@ -58,8 +62,10 @@ class LogIn extends Component {
               </InputGroup.Prepend>
               <Form.Control
                 style={{ fontFamily: 'Playfair Display, serif' }}
+                className="form-control"
                 type="email"
                 placeholder="Email address"
+                required
               />
             </InputGroup>
 
@@ -71,8 +77,10 @@ class LogIn extends Component {
               </InputGroup.Prepend>
               <Form.Control
                 style={{ fontFamily: 'Playfair Display, serif' }}
+                className="form-control"
                 type="password"
                 placeholder="Password"
+                required
               />
             </InputGroup>
 
@@ -90,6 +98,18 @@ class LogIn extends Component {
               type="submit"
             >
               Submit
+            </Button>
+
+          </Form>
+
+          <Form method='post'>
+
+            <Button
+              variant="outline-info btn-register mt-5 btn-lg btn-block"
+              style={{ fontFamily: 'Abril Fatface, cursive' }}
+              type="submit"
+            >
+              Create an account
             </Button>
 
           </Form>

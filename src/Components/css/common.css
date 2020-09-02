@@ -53,6 +53,8 @@
 
 .btn-login {
   background-color: #6445c9;
-  font-family: 'Russo One', sans-serif;
 }
 
+.btn-register {
+  color: #6445c9;
+}
