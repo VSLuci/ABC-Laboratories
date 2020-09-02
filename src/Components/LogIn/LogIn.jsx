@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GoogleFontLoader from 'react-google-font-loader';
-import "../FontAwesome/FontAwesomeIcons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "../css/common.css";
 import { Form, Button, InputGroup } from 'react-bootstrap'
 import { login } from "../../API/authAPI";
@@ -57,7 +57,7 @@ class LogIn extends Component {
             <InputGroup className="mt-5 mb-4">
               <InputGroup.Prepend>
                 <span className="input-group-text">
-                  <FontAwesomeIcon icon="envelope" />
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </span>
               </InputGroup.Prepend>
               <Form.Control
@@ -72,7 +72,7 @@ class LogIn extends Component {
             <InputGroup className="mb-4">
               <InputGroup.Prepend>
                 <span className="input-group-text">
-                  <FontAwesomeIcon icon="lock" />
+                  <FontAwesomeIcon icon={faLock} />
                 </span>
               </InputGroup.Prepend>
               <Form.Control
