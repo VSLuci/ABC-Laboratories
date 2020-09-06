@@ -1,13 +1,17 @@
-const { authAxios } = require("./api")
+const { authAxios } = require('./api');
 
 export const login = async ({ email, password, history }) => {
-    try {
-        const { data } = await authAxios.post('auth/login', { email, password });
-        const token = data.data.token;
-        const user = data.data.user;
-        sessionStorage.setItem('json_token', token);
-        history.replace('/abc/home')
-    } catch (error) {
-        console.log(error.message);
+  try {
+    const { data } = await authAxios.post('auth/login', { email, password });
+    console.log(data);
+    if (data.success === true) {
+      const token = data.data.token;
+      sessionStorage.setItem('json_token', token);
+      history.replace('/home');
+    } else {
+      alert('Authentication Failure');
     }
-}
+  } catch (error) {
+    console.log(error.message);
+  }
+};
